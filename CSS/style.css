@@ -1,0 +1,179 @@
+/* Estilo del cuerpo y contenedor */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #cfe2f3; /* Cambiar al color de fondo deseado */
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    position: relative; /* Posición relativa para el cuerpo */
+}
+
+.container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(247, 142, 142, 0.1);
+    position: relative;
+    text-align: center; /* Alineación centrada del contenido */
+    overflow: hidden; /* Ocultar desbordamiento para que no se vean los escudos */
+    background-image: url('IPN.png'), url('logo.png');
+    background-position: left top, right top;
+    background-repeat: no-repeat;
+    background-size: 80px 80px; /* Tamaño reducido de los escudos */
+}
+
+
+h1,h2,h3 {
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.fade-in {
+    opacity: 0; /* Comienza invisible */
+    animation: fadeIn 1.5s ease-in-out forwards; /* Animación de 1.5 segundos */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.center {
+    margin-top: 10px; /* Espacio opcional sobre la imagen */
+}
+
+.center img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto; /* Centrar la imagen horizontalmente */
+    max-width: 800px;
+    transition: opacity 0.8s ease-in-out; /* Transición de opacidad */
+}
+
+/* Aplicar opacidad completa después de que el contenedor principal haya terminado de desvanecerse */
+.fade-in .center img {
+    opacity: 1;
+}
+
+/* Estilos para etiquetas */
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="submit"],
+button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+input[type="submit"],
+button {
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover,
+button:hover {
+    background-color: #4cae4c;
+}
+
+a {
+    color: #5cb85c;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+.alert {
+    padding: 15px;
+    background-color: #f44336;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.alert-success {
+    background-color: #4caf50;
+}
+
+.alert-info {
+    background-color: #2196f3;
+}
+
+.alert-warning {
+    background-color: #ff9800;
+}
+
+a.button {
+    display: inline-block; /* Mostrar como bloque en línea */
+    padding: 10px 20px; /* Relleno interno del botón */
+    background-color: #007bff; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    text-decoration: none; /* Quitar subrayado del enlace */
+    border-radius: 5px; /* Borde redondeado */
+    transition: background-color 0.3s ease; /* Transición suave de color de fondo */
+}
+
+a.button:hover {
+    background-color: #0056b3; /* Color de fondo del botón al pasar el mouse */
+}
+/* Estilos para el contenedor del texto */
+.text-container {
+    opacity: 0; /* Inicialmente invisible */
+    transition: opacity 1s ease; /* Transición suave de la opacidad */
+    margin-top: 20px; /* Ajuste opcional de margen superior */
+    text-align: justify; /* Justificación del texto */
+}
+
+/* Estilos para hacer que el texto aparezca cuando el contenedor es visible */
+.text-container.appear {
+    opacity: 1;
+}
